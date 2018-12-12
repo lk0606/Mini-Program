@@ -1,0 +1,65 @@
+/* pages/join/join.wxss */
+page{
+  background:rgba(255,255,255,1);
+  height: 100%;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 94rpx 56rpx;
+}
+.title image{
+  width: 300rpx;
+  height: 112rpx;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container view{
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  width:650rpx;
+  height:90rpx;
+  background:rgba(255,255,255,1);
+  border-radius:46rpx;
+  border:1px solid rgba(229,229,229,1);
+}
+.container view:nth-of-type(4){
+  margin-bottom: 40rpx;
+}
+.container view:last-of-type{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #D14844;
+}
+.container view:last-of-type button{
+  width: 100%;
+  background: #D14844;
+  color: white;
+  border-radius:46rpx;
+  margin-bottom: 0;
+  font-size: 34rpx;
+}
+.container view image{
+  padding-left: 36rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.container view input{
+  padding-left: 36rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(136,136,136,1);
+  line-height: 44rpx;
+}
+.container view .placeholder{
+  color: #888888;
+  /* color:red; */
+}

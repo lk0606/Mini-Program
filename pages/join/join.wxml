@@ -1,0 +1,15 @@
+<!--pages/join/join.wxml-->
+<!-- <view class='wrap'> -->
+  <view class="title">
+    <image src='../../img/logo_1.png'></image>
+  </view>
+  <view class="container">
+    <view wx:for="{{ regInfo }}" wx:key="regInfo.img">
+      <image src='{{ item.img }}'></image>
+      <input type='text' placeholder='{{ item.text }}' placeholder-class='placeholder'/>
+    </view>
+    <view>
+      <button>提交加盟申请</button>
+    </view>
+  </view>
+<!-- </view> -->
