@@ -12,33 +12,26 @@
     </view>
   </view> -->
   <!-- 所在地区 -->
-  <view class='normal special'>
-    <text>{{regInfo.special[0].text}}</text>
+  <view class='normal special' wx:for="{{regInfo.region}}" wx:key="regInfo.region.placeholder">
+    <text>{{ item.text }}</text>
     <view>
-      <input type='text' placeholder='{{regInfo.special[0].placeholder[0]}}' placeholder-class='placeholder'></input>
-      <image src="{{regInfo.special[0].icon}}"></image>
-    </view>
-  </view>
-  <view class='normal special'>
-    <text></text>
-    <view>
-      <input type='text' placeholder='{{regInfo.special[0].placeholder[1]}}' placeholder-class='placeholder'></input>
-      <image src="{{regInfo.special[0].icon}}"></image>
+      <input type='text' placeholder='{{ item.placeholder }}' placeholder-class='placeholder'></input>
+      <image src="{{ item.icon }}"></image>
     </view>
   </view>
   <!-- 详细地址 -->
+  <view class='normal special'>
+    <text>{{regInfo.special[0].text}}</text>
+    <view>
+      <input type='text' placeholder='{{regInfo.special[0].placeholder}}' placeholder-class='placeholder'></input>
+    </view>
+  </view>
+  <!-- 授权小区 -->
   <view class='normal special'>
     <text>{{regInfo.special[1].text}}</text>
     <view>
       <input type='text' placeholder='{{regInfo.special[1].placeholder}}' placeholder-class='placeholder'></input>
-    </view>
-  </view>
-  <!-- 详细地址 -->
-  <view class='normal special'>
-    <text>{{regInfo.special[2].text}}</text>
-    <view>
-      <input type='text' placeholder='{{regInfo.special[2].placeholder}}' placeholder-class='placeholder'></input>
-      <image src="{{regInfo.special[0].icon}}"></image>
+      <image src="{{regInfo.special[1].icon}}"></image>
     </view>
   </view>
 </view>

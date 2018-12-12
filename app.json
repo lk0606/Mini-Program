@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/test/test",
     "pages/register/register",
     "pages/join/join",
     "pages/index/index",

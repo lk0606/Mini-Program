@@ -25,12 +25,19 @@ Page({
           placeholder: '请输入手机号'
         }
       ],
-      special: [
+      region: [
         {
           text: '所在地区',
-          placeholder: ['请选择地区', '请选择'],
+          placeholder: '请选择地区',
           icon: '../../img/rightarrow.png'
         },
+        {
+          text: '',
+          placeholder: '请选择',
+          icon: '../../img/rightarrow.png'
+        }
+      ],
+      special: [
         {
           text: '详细地址',
           placeholder: '请输入详细地址'
