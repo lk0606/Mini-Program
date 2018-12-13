@@ -4,7 +4,8 @@
     "pages/test/test",
     "pages/join/join",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/authorize/authorize"
   ],
   "window": {
     "backgroundTextStyle": "light",

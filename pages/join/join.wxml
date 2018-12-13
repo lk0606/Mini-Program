@@ -20,7 +20,7 @@
       placeholder='{{ regInfo[0].text }}' placeholder-class='placeholder'/>
     </view> -->
     <view>
-      <button>提交加盟申请</button>
+      <button disabled='{{isDisabled}}' bindtap='toAuthorize'>提交加盟申请</button>
     </view>
   </view>
 <!-- </view> -->

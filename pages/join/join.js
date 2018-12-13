@@ -10,6 +10,8 @@ Page({
    * 初始数据
    */
   data: {
+    isRight: ['false', 'false', 'false', 'false'],
+    isDisabled: false,
     tips: [
       '姓名不能为空', 
       '手机号码不正确或手机号为空',
@@ -39,6 +41,26 @@ Page({
   /**
    * 方法列表
    */
+  // 跳转到授权
+  toAuthorize(e) {
+      console.log(this.data.isRight)
+    let isRight = false
+    for(let i of this.data.isRight){
+      if (i === 'true'){
+          isRight = true
+      }
+    }
+    if(isRight) {
+      wx.navigateTo({
+        url: '../authorize/authorize'
+      })
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '信息有误或为空'
+      })
+    }
+  },
   // 全局表单验证
   // formValidation() {
   //   app.regValidation();
@@ -56,12 +78,14 @@ Page({
     console.log(e)
     if ( index === 0 && e.detail.value === '') {
       // console.log(inputVal)
+      this.data.isRight[index] = 'false'
       wx.showModal({
         title: '提示',
         content: this.data.tips[index]
       })
     }
     else if ( index === 1 && !app.regValidation(e.detail.value, "phone")) {
+      this.data.isRight[index] = 'false'
       wx.showModal({
         title: '提示',
         content: this.data.tips[index],
@@ -74,17 +98,22 @@ Page({
         // }
       })
     }
-    else if ( index === 2 && e.detail.value === '') {
+    else if (index === 2 && e.detail.value === '') {
+      this.data.isRight[index] = 'false'
       wx.showModal({
         title: '提示',
         content: this.data.tips[index]
       })
     }
-    else if ( index === 3 && e.detail.value === '') {
+    else if (index === 3 && e.detail.value === '') {
+      this.data.isRight[index] = 'false'
       wx.showModal({
         title: '提示',
         content: this.data.tips[index]
       })
+    }
+    else{
+      this.data.isRight[index] = 'true'
     }
   },
   /**

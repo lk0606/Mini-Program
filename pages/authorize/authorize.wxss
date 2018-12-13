@@ -1,0 +1,42 @@
+/* pages/authorize/authorize.wxss */
+page{
+  height: 100%;
+  font-family:PingFangSC-Regular;
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap image{
+  margin-top: 84rpx;
+  margin-bottom: 22rpx;
+  width: 130rpx;
+  height: 144rpx;
+}
+.wrap text{
+  width:630rpx;
+  text-align: center;
+  font-size:40rpx;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:56rpx;
+  padding-bottom: 70rpx;
+  margin-bottom: 60rpx;
+  border-bottom: 1px solid #D8D8D8;
+}
+.wrap1 text{
+  font-size:32rpx;
+  line-height:44rpx;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 100rpx;
+}
+.wrap1 button{
+  width:650rpx;
+  height:90rpx;
+  background:rgba(209,72,68,1);
+  border-radius:46rpx;
+  color: white;
+}

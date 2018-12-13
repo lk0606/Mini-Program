@@ -1,0 +1,9 @@
+<!--pages/authorize/authorize.wxml-->
+<view class='wrap'>
+  <image src='../../img/logo_2x.png'></image>
+  <text>新疆乐乐妈</text>
+</view>
+<view class='wrap wrap1'>
+  <text>您的公开信息（昵称和头像等）</text>
+  <button disabled='{{isDisabled}}' bindtap='toJoin'>继续</button>
+</view>

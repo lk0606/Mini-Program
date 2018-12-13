@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -56,6 +56,11 @@
 					"name": "join",
 					"pathName": "pages/join/join",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "authorize",
+					"pathName": "pages/authorize/authorize"
 				}
 			]
 		}
