@@ -1,15 +1,30 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
 <view class="section">
-  <view class="section__title">省市区选择器</view>
+  <view class="section__title" >市选择</view>
   <picker
-    mode="region"
+    class="option"
+    mode="selector"
     bindchange="bindRegionChange"
-    value="{{region}}"
-    custom-item="{{customItem}}"
+    range='{{ region }}'
+    range-key="{{ 'title' }}"
+    value="{{ regionId }}"
   >
     <view class="picker">
-      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      {{ region[regionId].title }}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title" >区选择</view>
+  <picker
+    mode="selector"
+    bindchange="bindRegionChildrenChange"
+    range='{{ region[regionId].children }}'
+    range-key="{{ 'title' }}"
+    value="{{ regionChildrenId }}"
+  >
+    <view class="picker">
+      当前选择：{{ region[regionId].children[regionChildrenId].title }}
     </view>
   </picker>
 </view>

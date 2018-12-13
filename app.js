@@ -1,5 +1,20 @@
 //app.js
 App({
+  // 正则验证
+  regValidation(str, type){
+    switch(type) {
+      // 空值
+      case "null": var reg = /^\S$/; break;
+      // 中文
+      case "chinese": var reg = /^[\u4e00-\u9fa5]+$/g; break;
+      // 身份证
+      case "IdCard": var reg = /^\d{17}(\d|X)$/; break;
+      // 电话号码
+      case "phone": var reg = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/; break;
+      default:;
+    }
+    return reg.test(str);
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

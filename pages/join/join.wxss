@@ -52,11 +52,13 @@ page{
   height: 48rpx;
 }
 .container view input{
+  color: #333333;
+  width: 530rpx;
   padding-left: 36rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
-  color: rgba(136,136,136,1);
+  /* color: rgba(136,136,136,1); */
   line-height: 44rpx;
 }
 .container view .placeholder{

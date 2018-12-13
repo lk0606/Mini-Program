@@ -6,8 +6,19 @@
   <view class="container">
     <view wx:for="{{ regInfo }}" wx:key="regInfo.img">
       <image src='{{ item.img }}'></image>
-      <input type='text' placeholder='{{ item.text }}' placeholder-class='placeholder'/>
+      <input type="text"
+      maxlength='11'
+      bindinput="inputVal"
+      bindblur="blurValidation"
+      data-index="{{ index }}"
+      placeholder='{{ item.text }}' placeholder-class='placeholder'/>
     </view>
+    <!-- <view >
+      <image src='{{ regInfo[0].img }}'></image>
+      <input type="text"
+      bindblur="blurValidation"
+      placeholder='{{ regInfo[0].text }}' placeholder-class='placeholder'/>
+    </view> -->
     <view>
       <button>提交加盟申请</button>
     </view>

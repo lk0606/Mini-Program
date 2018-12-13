@@ -19,9 +19,9 @@ page{
   line-height:44rpx;
   border-bottom: 1px solid #e5e5e5;
 }
-.container .special{
+/* .container .special{
   border-bottom: none;
-}
+} */
 .container .normal text{
   padding: 22rpx 0;
   width: 180rpx;
@@ -35,7 +35,13 @@ page{
   padding-right: 0;
   padding-bottom: 0;
 }
-.container .special view{
+.container .normal:nth-of-type(5){
+  border-bottom: none;
+}
+.container .normal:nth-of-type(6) view{
+  border-bottom: none;
+}
+.container .special >view{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,6 +57,19 @@ page{
 .container .special view input{
   padding-left: 0;
 }
+.container .special view .option{
+  width: 510rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.container .special view .option .picker{
+  margin-left: 20rpx;
+  color: #888;
+}
+.container .special view .option .black{
+  margin-left: 20rpx;
+  color:rgba(0,0,0,1);
+}
 .container .special view image{
   /* margin-right: 20rpx; */
   width:11px;
@@ -60,7 +79,8 @@ page{
   font-size:32rpx;
   font-family:PingFangSC-Regular;
   font-weight:400;
-  color:rgba(136,136,136,1);
+  /* color:rgba(136,136,136,1); */
+  color: #888888;
   line-height:44rpx;
 }
 .container .special view{
@@ -68,6 +88,14 @@ page{
 }
 .container .special view input{
   margin-left: 20rpx;
+}
+.container .address{
+  align-items: flex-start;
+  height: 176rpx;
+  border-bottom: 1px solid #e5e5e5; 
+}
+.container .address view{
+  border: none;
 }
 /* 阅读 */
 .footer{
@@ -89,6 +117,10 @@ page{
   font-weight:400;
   color:rgba(136,136,136,1);
   line-height:40rpx;
+}
+.footer .read text .notify{
+  color: #D14844;
+  text-decoration: underline;
 }
 .footer .submit{
   color: white;
