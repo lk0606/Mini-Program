@@ -125,6 +125,9 @@ Page({
   /**
    * 组件的方法列表
    */
+  onGetUserInfo(e) {
+    console.log(e.detail.userInfo)
+  },
   bindRegionChange(e) {
     console.log('picker发送市选择改变，携带值为', e.detail.value)
     this.setData({
@@ -148,14 +151,25 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res.userInfo)
+            }
+          })
+        }
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

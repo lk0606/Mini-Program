@@ -1,0 +1,4 @@
+<!--pages/upimg/upimg.wxml-->
+<cover-view class="pause" bindtap="pause">
+  <cover-image class="img" src="/path/to/icon_pause" />
+</cover-view>

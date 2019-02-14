@@ -1,11 +1,14 @@
 {
   "pages": [
+    "pages/join/join",
     "pages/register/register",
     "pages/test/test",
-    "pages/join/join",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/authorize/authorize"
+    "pages/authorize/authorize",
+    "pages/scrollview/scrollview",
+    "pages/upimg/upimg",
+    "pages/pickerView/pickerView"
   ],
   "window": {
     "backgroundTextStyle": "light",

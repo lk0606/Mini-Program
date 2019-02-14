@@ -80,5 +80,5 @@
     <text>我已阅读并同意<text class="notify">《代理制度》</text>、<text class="notify">《代理须知》</text>
     </text>
   </view>
-  <button class='submit'>提交</button>
+  <button class='submit' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo" >提交</button>
 </view>

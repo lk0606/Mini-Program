@@ -1,1 +1,5 @@
 /* pages/test/test.wxss */
+.btn-wrap{
+  display: flex;
+  justify-content: space-between;
+}

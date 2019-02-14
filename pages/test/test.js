@@ -1,4 +1,20 @@
 // pages/test/test.js
+const date = new Date()
+const years = []
+const months = []
+const days = []
+
+for (let i = 1990; i <= date.getFullYear(); i++) {
+  years.push(i)
+}
+
+for (let i = 1; i <= 12; i++) {
+  months.push(i)
+}
+
+for (let i = 1; i <= 31; i++) {
+  days.push(i)
+}
 Component({
   /**
    * 组件的属性列表
@@ -10,6 +26,14 @@ Component({
    * 组件的初始数据
    */
   data: {
+    years,
+    year: date.getFullYear(),
+    months,
+    month: 2,
+    days,
+    day: 2,
+    value: [9999, 1, 1],
+    show: false,
     // region: ['新疆维吾尔自治区', '乌鲁木齐市', '天山区'],
     region: [
       {
@@ -76,6 +100,24 @@ Component({
       console.log('picker发送区选择改变，携带值为', e.detail.value)
       this.setData({
         regionChildrenId: e.detail.value
+      })
+    },
+    close() {
+      this.setData({
+        show: false
+      })
+    },
+    open() {
+      this.setData({
+        show: true
+      })
+    },
+    bindChange(e) {
+      const val = e.detail.value
+      this.setData({
+        year: this.data.years[val[0]],
+        month: this.data.months[val[1]],
+        day: this.data.days[val[2]]
       })
     }
   }
